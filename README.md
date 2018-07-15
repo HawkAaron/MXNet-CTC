@@ -1,6 +1,9 @@
-# MxNet binding for Warp-ctc
+# MXNet binding for Warp-ctc
 
-Since MxNet implementation of CTC loss cannot do well with large vocab, this repo provides a binding for MxNet.
+> Follow [here](https://github.com/HawkAaron/mxnet-transducer#install-and-test) to build this binding in MXNet source.
+
+Since MXNet implementation of CTC loss cannot do well with large vocab, this repo provides a binding for MXNet.
+
 
 # Python wrap 
 
