@@ -12,6 +12,7 @@
 
 #include "ctc_helper.h"
 
+namespace baidu_warpctc {
 
 template<typename ProbT>
 class CpuCTC {
@@ -496,3 +497,5 @@ ctcStatus_t CpuCTC<ProbT>::score_forward(const ProbT* const activations,
 
     return CTC_STATUS_SUCCESS;
 }
+
+} // baidu_warpctc

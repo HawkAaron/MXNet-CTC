@@ -23,7 +23,7 @@ ctcStatus_t compute_ctc_cost(const Tensor<cpu, 3, DType> activations,
 
     int minibatch = activations.size(1);
     int alphabet_size = activations.size(2);
-    CpuCTC<DType> ctc(alphabet_size, minibatch, workspace, 0, blank_label);
+    baidu_warpctc::CpuCTC<DType> ctc(alphabet_size, minibatch, workspace, 0, blank_label);
 
     if (train)
         return ctc.cost_and_grad(activations.dptr_, gradients,

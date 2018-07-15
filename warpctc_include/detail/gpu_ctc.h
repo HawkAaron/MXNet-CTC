@@ -4,6 +4,8 @@
 #include "gpu_ctc_kernels.h"
 #include "reduce.h"
 
+namespace baidu_warpctc {
+
 template <typename ProbT>
 class GpuCTC {
     public:
@@ -475,3 +477,4 @@ GpuCTC<ProbT>::score_forward(const ProbT* const activations,
                                   label_lengths, input_lengths, true, false);
 }
 
+} // baidu_warpctc

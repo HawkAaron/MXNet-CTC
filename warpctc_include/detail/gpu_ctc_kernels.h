@@ -7,6 +7,8 @@
 
 using namespace mgpu;
 
+namespace baidu_warpctc {
+
 template<int NT, int VT, typename T, typename KeyT, typename Op>
 struct CTASegReduce {
 
@@ -486,3 +488,5 @@ __global__ void prepare_stable_SM_kernel(Op f, ProbT* probs,
         idx += stride;
     }
 }
+
+} // baidu_warpctc

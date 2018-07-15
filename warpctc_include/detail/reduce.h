@@ -12,6 +12,8 @@
 // For the functors
 #include "ctc_helper.h"
 
+namespace baidu_warpctc {
+
 const int warp_size = 32;
 
 template<int NT, typename T, typename Rop>
@@ -155,3 +157,5 @@ ctcStatus_t reduce_exp(const float *input, float *output, int rows, int cols, bo
 ctcStatus_t reduce_max(const float *input, float *output, int rows, int cols, bool axis, cudaStream_t stream) {
     return reduce(ctc_helper::identity<float>(), ctc_helper::maximum<float>(),input, output, rows, cols, axis, stream);
 }
+
+} // baidu_warpctc
